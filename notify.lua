@@ -1,19 +1,14 @@
-local function ShowNotify(DATA)
+local function ShowNotify(data)
     SendNUIMessage({
-        createNew = true,
-        data = DATA
+        action = 'notify',
+        data = data
     })
-end
+end exports("ShowNotify", ShowNotify)
 
-exports("ShowNotify", ShowNotify)
-
-RegisterCommand("test", function()
+RegisterCommand("testnotify", function()
     ShowNotify({
-        ['type'] = "success",
-        ['message'] = "~w~This is a very big test message just to check how much does the notify occupy"
-    })
-    ShowNotify({
-        ['type'] = "success",
-        ['message'] = "~r~This is a very big test message just to check how much does the notify occupy"
+        type = "success",
+        message = "This is a very big test message just to check how much does the notify occupy",
+        duration = 6000 -- default: 5000
     })
 end, false)

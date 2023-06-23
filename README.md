@@ -1,4 +1,4 @@
-# cad-notify
-Just another notification system
+This is just a simple notification system inspired from a application called outplayed.
 
-![image](https://github.com/cadburry6969/cad-notify/assets/72443203/e9acbe84-004d-465e-ad5b-e3d75669f998)
+# Preview
+

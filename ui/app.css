@@ -15,7 +15,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 45.5%;
+  padding-top: 22%;
+  padding-bottom: 45%;
   padding-right: 3%;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
@@ -36,11 +37,8 @@
   width: 320px;
   height: auto;
   margin: 1rem;
-  /* background: radial-gradient(22% 90% at left, #E6004D 100%, #211F2E 100%);    */
-  background: radial-gradient(22% 90% at left, #FF0037 100%, #211F2E 50%);
+  background: #211F2E;
   border-radius: 0.1rem;
-  /* -webkit-box-shadow: #FF0037 0px 1px 3px;
-    box-shadow: #FF0037 0px 1px 3px; */
 }
 
 * #root .main .notification .message {
@@ -52,8 +50,7 @@
   -ms-flex-flow: column;
   flex-flow: column;
   width: 80%;
-  margin-left: 1.5vh;
-  padding: 1rem;
+  padding: 0.5rem;
   color: #cacaca;
 }
 
@@ -69,11 +66,15 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 20%;
+  width: 25%;
   height: 90%;
   font-size: 26px;
   z-index: 1;
-  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: radial-gradient(90% 100% at center, #FF0037 100%, #FF0037 0%);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 .unfold {
@@ -86,86 +87,66 @@
   animation: fold 4s ease;
 }
 
-@-webkit-keyframes loading {
-  0% {
-    width: 100%;
-  }
-
-  100% {
-    width: 0%;
-  }
-}
-
-@keyframes loading {
-  0% {
-    width: 100%;
-  }
-
-  100% {
-    width: 0%;
-  }
-}
-
 @-webkit-keyframes fold {
   0% {
     opacity: 0.8;
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 
   6%,
   20%,
   80% {
     opacity: 0;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
   }
 }
 
 @keyframes fold {
   0% {
     opacity: 0.8;
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 
   6%,
   20%,
   80% {
     opacity: 0;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
   }
 }
 
 @-webkit-keyframes unfold {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
   }
 
   6%,
   20%,
   80% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 
 @keyframes unfold {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
   }
 
   6%,
   20%,
   80% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
